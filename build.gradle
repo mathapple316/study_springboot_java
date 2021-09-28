@@ -1,0 +1,23 @@
+plugins {
+	id 'org.springframework.boot' version '2.4.11'
+	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+	id 'java'
+}
+
+group = 'hello'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '11'
+
+repositories {
+	mavenCentral() // maven에서 제공하는 리포지토리 사이트
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf' // thymeleaf 라이브러리
+	implementation 'org.springframework.boot:spring-boot-starter-web' // 스프링부트웹 라이브러리
+	testImplementation 'org.springframework.boot:spring-boot-starter-test' // 테스트 라이브러리 (기본으로 들어가나봄)
+}
+
+test {
+	useJUnitPlatform()
+}
