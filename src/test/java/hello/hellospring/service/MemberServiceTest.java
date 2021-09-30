@@ -20,7 +20,7 @@ class MemberServiceTest {
     public void beforeEach() {
         memoryMemberRepository = new MemoryMemberRepository();
         memberService = new MemberService(memoryMemberRepository);
-        memberRepository.ClearStore();
+        memoryMemberRepository.ClearStore();
     }
 
     @Test
